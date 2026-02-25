@@ -430,10 +430,18 @@ footer {
   .header-inner {
     flex-wrap: wrap;
     padding-bottom: 1rem;
+    align-items: center;
+  }
+
+  .brand {
+    flex: 1;
+    min-width: 0;
   }
 
   .nav-toggle {
     display: inline-flex;
+    align-self: center;
+    flex-shrink: 0;
   }
 
   .site-nav {
