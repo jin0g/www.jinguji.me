@@ -437,10 +437,13 @@ footer {
 
   .brand {
     min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .brand span {
     display: block;
+    min-width: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
