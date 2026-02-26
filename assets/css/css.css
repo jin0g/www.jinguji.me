@@ -428,17 +428,18 @@ footer {
 
 @media (max-width: 768px) {
   .header-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    column-gap: 0.75rem;
+    display: block;
     padding-bottom: 1rem;
   }
 
   .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     min-width: 0;
     max-width: 100%;
     overflow: hidden;
+    margin-bottom: 0.75rem;
   }
 
   .brand span {
@@ -449,30 +450,26 @@ footer {
     text-overflow: ellipsis;
   }
 
-  .nav-toggle {
-    display: inline-flex;
-    justify-self: end;
-  }
-
   .site-nav {
-    grid-column: 1 / -1;
     width: 100%;
-    flex-direction: column;
-    gap: 0.5rem;
-    display: none;
-    padding-top: 0.75rem;
-  }
-
-  .site-nav.is-open {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.9rem;
     display: flex;
+    overflow-x: auto;
+    padding-top: 0;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .site-nav a::after {
-    display: none;
+  .site-nav a,
+  .lang-toggle {
+    white-space: nowrap;
   }
 
   .lang-toggle {
-    align-self: flex-start;
+    margin-left: auto;
+    flex-shrink: 0;
   }
 
   .pub-list {
