@@ -472,6 +472,15 @@ footer {
     flex-shrink: 0;
   }
 
+  .hero {
+    grid-template-columns: 1fr;
+    padding: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .hero img {
+    max-height: none;
+  }
+
   .pub-list {
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   }
