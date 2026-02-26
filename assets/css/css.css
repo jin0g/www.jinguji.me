@@ -428,15 +428,31 @@ footer {
 
 @media (max-width: 768px) {
   .header-inner {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 0.75rem;
     padding-bottom: 1rem;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .nav-toggle {
     display: inline-flex;
+    justify-self: end;
   }
 
   .site-nav {
+    grid-column: 1 / -1;
     width: 100%;
     flex-direction: column;
     gap: 0.5rem;
